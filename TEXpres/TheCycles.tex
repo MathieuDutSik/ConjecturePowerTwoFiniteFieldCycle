@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{amsfonts, amsmath, latexsym, epic, eepic, pifont}
+\usepackage{epsf}
+\title{Sequence lists}
+\usepackage{vmargin}
+\setpapersize{custom}{21cm}{29.7cm}
+\setmarginsrb{0.7cm}{2cm}{0.7cm}{3.5cm}{0pt}{0pt}{0pt}{0pt}
+%marge gauche, marge haut, marge droite, marge bas.
+
+
+\begin{document}
+\newcommand{\RR}{\ensuremath{\mathbb{R}}}
+\newcommand{\NN}{\ensuremath{\mathbb{N}}}
+\newcommand{\QQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\CC}{\ensuremath{\mathbb{C}}}
+\newcommand{\ZZ}{\ensuremath{\mathbb{Z}}}
+\newcommand{\TT}{\ensuremath{\mathbb{T}}}
+\newcommand{\FF}{\ensuremath{\mathbb{F}}}
+\newtheorem{prop}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{cor}{Corollary}
+\newtheorem{lem}{Lemma}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{claim}{Claim}
+\newtheorem{remark}{Remark}
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newcommand{\qed}{\hfill $\Box$ }
+\newcommand{\proof}{\noindent{\bf Proof.}\ \ }
+
+
+\maketitle
+
+
+\begin{abstract}
+We consider here some sequences arising from diagram geometry.
+\end{abstract}
+
+
+\section{Definition and basic properties}
+Consider the Galois field $\FF_{2^n}$ with $2^n$ elements.
+If $h$ is prime with $n$, then the function
+\begin{equation*}
+\begin{array}{rcl}
+\phi_k:\FF_{2^n} &\rightarrow &\FF_{2^n}\\
+x&\mapsto x^{2^h-1}
+\end{array}
+\end{equation*}
+is bijective.
+
+As a consequence the function
+\begin{equation*}
+\begin{array}{rcl}
+\psi_{h,k}:\FF_{2^n} &\rightarrow &\FF_{2^n}\\
+x&\mapsto (1+x^{\frac{2^h-1}{2^k-1}})^{\frac{2^k-1}{2^h-1}})-1
+\end{array}
+\end{equation*}
+is bijective.
+
+Of interest is to study the cycle structure of $\psi_{h,k}$ for $h$ and $k$ being primes with $n$, $1\leq h,k \leq n-1$.
+This structure show up in the works of Antonio Pasini and Yoshiara Satoshi.
+
+
+
+
+
+\input{R5.tex}
+\input{R6.tex}
+\input{R7.tex}
+\input{R8.tex}
+\input{R9.tex}
+\input{R10.tex}
+\input{R11.tex}
+\input{R12.tex}
+\input{R13.tex}
+\input{R14.tex}
+\input{R15.tex}
+\input{R16.tex}
+\input{R17.tex}
+\input{R18.tex}
+\input{R19.tex}
+\input{R20.tex}
+\input{R21.tex}
+\input{R22.tex}
+\input{R23.tex}
+\input{R24.tex}
+\input{R25.tex}
+
+
+\end{document}
+

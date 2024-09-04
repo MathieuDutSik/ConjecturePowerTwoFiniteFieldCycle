@@ -1,0 +1,79 @@
+#!/usr/bin/perl -w
+
+$uu=scalar(@ARGV);
+if ($uu ne 1)
+{
+    print "PrintToTex FILE\n";
+    die;
+}
+
+$TheFile=$ARGV[0];
+
+
+
+open(INFILE, $TheFile) or die "impossible to open ".$TheFile;
+@U=<INFILE>;
+close(INFILE);
+
+@S=split("", $TheFile);
+for ($i=2; $i<=scalar(@S); $i++)
+{
+    if ($S[$i-1] eq "R")
+    {
+	$First=$i+1;
+    }
+}
+
+$str="";
+for ($i=$First; $i<=scalar(@S); $i++)
+{
+    $str=$str.$S[$i-1];
+}
+print "\\section{Results for \$n=".$str."\$}\n";
+
+
+print "\\begin{itemize}\n";
+for ($iLine=1; $iLine<=scalar(@U); $iLine++)
+{
+    $eLine=$U[$iLine-1];
+    @S=split(":", $eLine);
+    @K=split(" ", $S[0]);
+    #
+    @KH=split("=", $K[0]);
+    $h=$KH[1];
+    @KH=split("=", $K[1]);
+    $k=$KH[1];
+    print "\\item \$(h,k)=(".$h.",".$k.")\$ :";
+    #
+    @LSE=split(" ", $S[1]);
+    for ($iEnt=1; $iEnt<=scalar(@LSE); $iEnt++)
+    {
+	$eStr=$LSE[$iEnt-1];
+	$str="";
+	@SL1=split("", $eStr);
+	for ($iChar=1; $iChar<=scalar(@SL1); $iChar++)
+	{
+	    $eChar=$SL1[$iChar-1];
+	    if ($eChar ne "1" && $eChar ne "2" && $eChar ne "3" && $eChar ne "4" && $eChar ne "5" && $eChar ne "6" && $eChar ne "7" && $eChar ne "8" && $eChar ne "9" && $eChar ne "0")
+	    {
+		$str1=$str;
+		$str="";
+	    }
+	    else
+	    {
+		$str=$str.$eChar;
+	    }
+	}
+	$str2=$str;
+
+
+#	@SL=split("\^", $eStr);
+	if ($iEnt > 1)
+	{
+	    print ",";
+	}
+	print " \$".$str1."^{".$str2."}\$";
+    }
+    print "\n";
+}
+print "\\end{itemize}\n";

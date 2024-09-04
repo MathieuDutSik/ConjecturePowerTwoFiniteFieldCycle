@@ -1,0 +1,142 @@
+From deza  Wed Mar 10 08:32:00 2010
+X-Spam-Checker-Version: SpamAssassin 3.2.4 (2008-01-01) on orge.ens.fr
+X-Spam-Level: *
+X-Spam-Status: No, score=1.9 required=5.0 tests=ALL_TRUSTED,FH_DATE_PAST_20XX
+	autolearn=disabled version=3.2.4
+Received: from www.mail.ens.fr (sureau [129.199.96.22])
+	by orge.ens.fr (8.14.0/jb-1.1)
+	id o2A7VtaA026858 ; Wed, 10 Mar 2010 08:31:55 +0100
+Return-Path: <deza@orge.ens.fr>
+X-Envelope-To: 
+Received: from nat.is.tohoku.ac.jp ([130.34.232.114])
+        (SquirrelMail authenticated user deza)
+        by www.mail.ens.fr with HTTP;
+        Wed, 10 Mar 2010 08:31:55 +0100 (CET)
+Message-ID: <42356.130.34.232.114.1268206315.squirrel@www.mail.ens.fr>
+Date: Wed, 10 Mar 2010 08:31:55 +0100 (CET)
+Subject: More;
+       My conjectures 1-5 on Galois data versus Pasini-Yoshiara papers]
+From: deza@orge.ens.fr
+To: dutour@orge.ens.fr
+Cc: deza@orge.ens.fr
+User-Agent: SquirrelMail/1.4.4
+MIME-Version: 1.0
+Content-Type: text/plain;charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+X-Priority: 3 (Normal)
+Importance: Normal
+X-Virus-Scanned: by amavisd-milter (http://amavis.org/)
+Status: RO
+Content-Length: 4380
+Lines: 109
+
+A) The uniqueness part of their Proposition 1.6 (paper II), p.531, that it
+is unique case of coinciding sequences S(h,k),  S(h',k') for given n,
+except the case h+k=h'+k'=n) is WRONG:
+For n=13, S(1,5)=(S(4,6)=1^2,39^2,4056^2), S(1,6)=S(1,8)=(1^2,13^2,4082^2)
+and S(2,7)=S(5,7)=(1^2,52^2,4043^2).
+Perhaps, send them contrexamples?
+
+B) new conjecture 6): If |S(h,k)|=3, then n is prime.
+Now, in ALL cases, except S(1,12)=(1^2,65^34,64430^2) for n=17, such S(h,k)
+is (1^2,x^2,y^2) with gcd(x,y)=n or 3n.
+
+C) Small addition to my conjecture 4 below:
+"the largest |S(h,k)| for odd n has (1,2) only".
+The largest |S(h,k)| for even n was reached by  S(h,k) with following
+(h,k),(n-k,n-h):
+n=6:(1,5),(1,5); n=8:(1,5),(3,7); n=10:(1,3),(7,9) and (1,7),(3,9);
+n=12:(1,7),(5,11); n=14: (1,5),(9,13); n=16: (3,11),(5,13); n=18:
+(5,11),(7,13); n=20: (3,13),(7,17); n=22: (3,15),(7,19); n=24:
+(1,13),(11,23).So, for even n>6, 4 numbers were all primes or 3 primes and
+1 tripled prime.
+Interesting also that max |S(h,k|) increased with increasing of even n,
+except being 159 for n=20 and 110 for n=22.
+
+---------------------------- Message original ----------------------------
+Objet:   My conjectures 1-5 on Galois data versus Pasini-Yoshiara papers
+De:      deza@orge.ens.fr
+Date:    Mar 9 mars 2010 14:58
+À:       dutour@orge.ens.fr
+Copie à: deza@orge.ens.fr
+--------------------------------------------------------------------------
+
+I had a look on their papers in EuJC:
+i) New distance-regular graphs ...
+II) On a new family ...
+In their notations, m,h and e are h,k and n of your data.
+
+See their paper II), p.531.
+1) Their Proposition 1.6 prove my Conjecture 1 below; moreover, they prove
+that it is unique case of coinciding sequences S(h,k),  S(h',k') for given
+n, except the case h+k=h'+k'=n.
+2) Their Proposition 1.5 prove a part of my Conjecture 2: coincidence of
+all sequences S(h,k) with h+k=n for given n. But they NOT gave sequences
+explicitly.
+
+My conjectures 3-5 below are still alive. But I cannot provethem.
+As all poets, well-detecting structure in "chaos", I am only a bird
+detecting/signaling proie
+(vulnerability of a problem, in Onsager's terms), but in order to do a
+kill, wolves are needed...
+So, please, have a look on my conjectures 1-5 below, on pp. 531-533 of II)
+and pp. 549-551 of I).
+At this stage, I cannot move further without new imput from you.
+
+Their main object (affine expansion of dual hyperoval) corresponds, in
+their main case m ¥neq h,
+to the general case of your data.
+Their main conjecture in I) (on p. 551) is that this semibiplane is simply
+connected if gcd(h+k,n)=1 ; they checked it by GAP till n=<14, see last
+line of the paper.
+Their main conjecture in II) (on p.532) is that their semibiplane (with m
+¥neq h again) is neither cover, nor quotient.
+
+
+---------------------------- Message original ----------------------------
+Objet:   Some conjectures on Galois data
+De:      deza@orge.ens.fr
+Date:    Lun 8 mars 2010 9:16
+À:       dutour@orge.ens.fr
+Copie à: deza@orge.ens.fr
+--------------------------------------------------------------------------
+
+
+Let S(h,k) denote the sequence corresponding to the pair (h,k) and let
+|S(h,k)| be the length of S(h,k).  Some conjectures:
+
+1) S(h,k)=S(n-k,n-h); so, let h+k=<n.
+
+2) if h+k=n, then S(h,k) is (1^2,(2^{n-1}-1)^2) for odd n
+                  and it is (1^2,(2^{n-1}-1)^2) for even n.
+
+3) if h+k<n and |S(h,k)|=2, then n is prime.
+
+4) the largest |S(h,k)| for odd n has (1,2) only.
+
+Now, more problematic detailed version of Conjecture 3:
+Call the {\em age} of a prime number p>3, the maximal number t, if it
+exists, such that (p-2i+1)/2^i is an prime >3 for any integer i,0<i<t. If
+such t not exists, say that age of p is 1.
+Before 100, for example, (maximal) age 4 has only 47, age 3 has only 23,
+age 2 have only 11,59,83 and age 1 have  all other primes on [5,100], i.e.
+5,7,13,17,19,29,31,37,43,53,61,71,73,79,89,97.
+Conjectures:
+3a)if n is prime of age 1, then |S(1,(n+1)/2)|=2;
+3b)if n is prime of age 2, then |S(1,(n+1)/2)|>2 but some other (h,k) with
+   h+k<n and |S(h,k)|=2 exists;
+3c)if n is prime of age >2, then |S(h,k)|>2 for any (h,k) with h+k<n.
+
+So the next primes to check are 29,31,37,43 of age 1 and especially 47 of
+mysterious age 3.
+
+Latest remark to above: my above notion of {¥age} is not new in Number
+Theory; see http://en.wikipedia.org/wiki/Cunningham_chain
+
+
+
+
+
+
+
+
